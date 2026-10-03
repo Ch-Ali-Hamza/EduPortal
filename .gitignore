@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+jspm_packages/
+.pnpm-store/
+
+# Build & Output directories
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and Secret files
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# Backup and Temporary files
+*.bak
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# IDE & Editor configuration
+.vscode/
+.idea/
+*.suo
+*.user
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.classpath
+.project
+.settings/
+
+# OS Metadata
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Testing & Coverage
+coverage/
+.nyc_output/
