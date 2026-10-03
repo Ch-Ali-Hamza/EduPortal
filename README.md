@@ -20,7 +20,6 @@
 ## 📸 Screenshots
 
 ### 🎓 Student Dashboard
-
 > Students see their active courses, grade averages, upcoming assignments, and recent grades at a glance.
 
 ![Student Dashboard](docs/images/student_dashboard.png)
@@ -28,7 +27,6 @@
 ---
 
 ### 📊 Student Grade Book
-
 > Students can track all their grades across courses with letter grades, scores, and dates.
 
 ![Student Grade Book](docs/images/student_grades2.png)
@@ -36,7 +34,6 @@
 ---
 
 ### 👨‍🏫 Instructor Dashboard
-
 > Instructors manage their courses, view total enrolled students, and track assignments.
 
 ![Instructor Dashboard](docs/images/instructor_dashboard.png)
@@ -44,7 +41,6 @@
 ---
 
 ### 📋 Instructor Grade Management
-
 > Instructors can review and manage grade books for their courses.
 
 ![Instructor Grade Management](docs/images/instructor_gradebook.png)
@@ -52,7 +48,6 @@
 ---
 
 ### 🛡️ Admin — User Management
-
 > Administrators have full control over all users, roles, and activation status.
 
 ![Admin User Management](docs/images/admin_users.png)
@@ -80,21 +75,20 @@ EduPortal LMS
     └── images/              # Dashboard screenshots
 ```
 
-| Layer              | Technology                                  |
-| ------------------ | ------------------------------------------- |
-| **Frontend**       | React 18 + Vite + Inline CSS (no framework) |
-| **Backend**        | Node.js + Express.js                        |
-| **SQL Database**   | Oracle XE 21c via Sequelize ORM             |
-| **NoSQL Database** | MongoDB via Mongoose                        |
-| **Authentication** | JWT (JSON Web Tokens) + bcrypt              |
-| **Authorization**  | RBAC — Student / Instructor / Admin         |
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | React 18 + Vite + Inline CSS (no framework) |
+| **Backend** | Node.js + Express.js |
+| **SQL Database** | Oracle XE 21c via Sequelize ORM |
+| **NoSQL Database** | MongoDB via Mongoose |
+| **Authentication** | JWT (JSON Web Tokens) + bcrypt |
+| **Authorization** | RBAC — Student / Instructor / Admin |
 
 ---
 
 ## ✨ Features
 
 ### 🎓 Student Features
-
 - 📚 Browse and enroll in available courses
 - 📝 View upcoming and past assignments
 - 📊 Track grades with letter grade breakdown and average score
@@ -103,7 +97,6 @@ EduPortal LMS
 - 🧪 Take quizzes
 
 ### 👨‍🏫 Instructor Features
-
 - 🗂️ Manage assigned courses and enrolled students
 - ✍️ Create assignments with due dates and point values
 - 📋 Enter and manage student grades
@@ -111,7 +104,6 @@ EduPortal LMS
 - 📊 View course enrollment stats
 
 ### 🛡️ Admin Features
-
 - 👥 Full user management (create, activate, deactivate users)
 - 🏛️ Manage departments and courses
 - 📈 View system-wide enrollment data
@@ -121,20 +113,20 @@ EduPortal LMS
 
 ## 🔐 Role-Based Access Control (RBAC)
 
-| Action                     | 🎓 Student | 👨‍🏫 Instructor | 🛡️ Admin |
-| -------------------------- | :--------: | :-----------: | :------: |
-| View enrolled courses      |     ✅     |      ✅       |    ✅    |
-| Browse & enroll in courses |     ✅     |      ❌       |    ✅    |
-| View own grades            |     ✅     |      ❌       |    ✅    |
-| View own attendance        |     ✅     |      ❌       |    ✅    |
-| Take quizzes               |     ✅     |      ❌       |    ❌    |
-| Create assignments         |     ❌     |      ✅       |    ✅    |
-| Grade students             |     ❌     |      ✅       |    ✅    |
-| Mark attendance            |     ❌     |      ✅       |    ✅    |
-| Manage courses             |     ❌     |      ✅       |    ✅    |
-| Delete courses             |     ❌     |      ❌       |    ✅    |
-| Manage users               |     ❌     |      ❌       |    ✅    |
-| Manage departments         |     ❌     |      ❌       |    ✅    |
+| Action | 🎓 Student | 👨‍🏫 Instructor | 🛡️ Admin |
+|--------|:---:|:---:|:---:|
+| View enrolled courses | ✅ | ✅ | ✅ |
+| Browse & enroll in courses | ✅ | ❌ | ✅ |
+| View own grades | ✅ | ❌ | ✅ |
+| View own attendance | ✅ | ❌ | ✅ |
+| Take quizzes | ✅ | ❌ | ❌ |
+| Create assignments | ❌ | ✅ | ✅ |
+| Grade students | ❌ | ✅ | ✅ |
+| Mark attendance | ❌ | ✅ | ✅ |
+| Manage courses | ❌ | ✅ | ✅ |
+| Delete courses | ❌ | ❌ | ✅ |
+| Manage users | ❌ | ❌ | ✅ |
+| Manage departments | ❌ | ❌ | ✅ |
 
 ---
 
@@ -152,14 +144,13 @@ EduPortal LMS
 ## 1️⃣ Oracle Database Setup
 
 ### Install Oracle XE 21c
-
 Download from: https://www.oracle.com/database/technologies/xe-downloads.html
 
 After install, Oracle runs on `localhost:1521` with service `XEPDB1` or `ORCLPDB`.
 
 ### Create the LMS user and schema
 
-Open SQL\*Plus or SQL Developer, connect as SYSDBA:
+Open SQL*Plus or SQL Developer, connect as SYSDBA:
 
 ```sql
 -- Connect as: sqlplus sys/your_sys_password@localhost:1521/XEPDB1 as sysdba
@@ -174,7 +165,6 @@ sqlplus lms_user/your_password@localhost:1521/XEPDB1 @docs/schema.sql
 ```
 
 ### Verify in SQL Developer
-
 1. Open SQL Developer → New Connection
 2. Username: `lms_user` | Password: your password
 3. Hostname: `localhost` | Port: `1521` | Service: `XEPDB1`
@@ -185,7 +175,6 @@ sqlplus lms_user/your_password@localhost:1521/XEPDB1 @docs/schema.sql
 ## 2️⃣ MongoDB Setup
 
 ### Install MongoDB Community Server
-
 Download from: https://www.mongodb.com/try/download/community
 
 Start the service:
@@ -340,32 +329,26 @@ Then log in via the frontend at `http://localhost:5173`.
 ## 🔧 Troubleshooting
 
 ### Oracle connection fails
-
 ```
 ❌ Oracle connection failed: ORA-12541: No listener
 ```
-
 - Make sure Oracle XE is running: `lsnrctl status`
 - Verify service name matches `ORACLE_SID` in `.env` (e.g. `ORCLPDB` not `XEPDB1`)
 - Check `ORACLE_CONNECT_STRING` in `.env` matches exactly
 
 ### MongoDB connection fails
-
 ```
 ❌ MongoServerSelectionError
 ```
-
 - Run `mongod --version` to confirm MongoDB is installed
 - Ensure the `mongod` service is running: `net start MongoDB` (Windows)
 - Default URI: `mongodb://localhost:27017/lms_db`
 
 ### JWT errors on frontend
-
 - Token stored in `localStorage` under key `lms_token`
 - Clear site data / localStorage and log in again if you see `401` errors
 
 ### CORS errors on frontend
-
 - Make sure `FRONTEND_URL` in `.env` matches your Vite dev server port (default `http://localhost:5173`)
 - Do not mix HTTP and HTTPS origins
 
@@ -445,10 +428,11 @@ COURSES ──< ATTENDANCE >── STUDENTS
 ```
 
 MongoDB stores:
-
 - 📄 `notifications` — real-time user notifications
 - 📄 `quizquestions` — flexible quiz question bank
 - 📄 `coursecontents` — rich course content/materials
+
+
 
 <div align="center">
 
